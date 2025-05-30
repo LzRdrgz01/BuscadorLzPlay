@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buscador - FlixThemes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .fade-in {
+      animation: fade 0.5s ease-in-out forwards;
+    }
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="bg-[#0a0a0a] text-white min-h-screen flex flex-col">
+
+  <!-- Barra de búsqueda -->
+  <header class="bg-black py-4 px-6 shadow-md">
+    <div class="max-w-5xl mx-auto">
+      <input
+        id="buscar"
+        type="text"
+        placeholder="Buscar..."
+        class="w-full bg-[#1a1a1a] text-white placeholder-[#bfbfbf] rounded-md px-4 py-3 text-base focus:outline-none"
+        oninput="filtrar()"
+        autofocus
+      />
+    </div>
+  </header>
+
+  <!-- Resultados -->
+  <main class="flex-1 px-4 py-6 max-w-7xl mx-auto">
+    <ul id="busquedas" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 hidden">
+<!--PEGAR AQUI-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </ul>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#121212] text-[#999999] text-center py-6 text-sm">
+    <div class="mb-2 space-x-4">
+      <a href="#" class="hover:text-white">Privacidad</a>
+      <a href="#" class="hover:text-white">Términos de Uso</a>
+      <a href="#" class="hover:text-white">DMCA</a>
+    </div>
+    <div>
+      © 2025. Todos los derechos reservados. <strong>LzPlay!</strong> se usa bajo licencia.
+    </div>
+  </footer>
+
+  <!-- Script de filtro -->
+  <script>
+     function filtrar() {
+      const input = document.getElementById("buscar");
+      const filter = input.value.trim().toUpperCase();
+      const ul = document.getElementById("busquedas");
+      const li = ul.getElementsByTagName("li");
+
+      let hayCoincidencias = false;
+
+      if (filter === "") {
+        ul.style.display = "none";
+        return;
+      }
+
+      for (let i = 0; i < li.length; i++) {
+        const a = li[i].getElementsByTagName("a")[0];
+        const txtValue = a.textContent || a.innerText;
+
+        if (txtValue.toUpperCase().includes(filter)) {
+          li[i].style.display = "";
+          li[i].classList.add("fade-in");
+          hayCoincidencias = true;
+        } else {
+          li[i].style.display = "none";
+          li[i].classList.remove("fade-in");
+        }
+      }
+
+      ul.style.display = hayCoincidencias ? "grid" : "none";
+    }
+  </script>
+
+  <!-- Autoenfoque con teclado en móviles -->
+  <script>
+    window.addEventListener("load", () => {
+      const input = document.getElementById("buscar");
+      input.focus();
+      setTimeout(() => {
+        input.focus();
+        input.setSelectionRange(input.value.length, input.value.length);
+      }, 200);
+    });
+  </script>
+  </script>
+
+</body>
+</html>
