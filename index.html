@@ -34,7 +34,7 @@
 </head>
 <body class="bg-[#0a0a0a] text-white min-h-screen flex flex-col">
 
-  <!-- Barra de búsqueda -->
+  <!-- Barra de bÃºsqueda -->
   <header class="bg-black py-4 px-6 shadow-md">
     <div class="max-w-5xl mx-auto">
       <input
@@ -48,25 +48,35 @@
     </div>
   </header>
 
-  <!-- Estado de búsqueda -->
+  <!-- Estado de bÃºsqueda -->
   <div id="estadoBusqueda" class="text-center text-sm text-[#bbbbbb] mt-6 hidden"></div>
 
   <!-- Resultados -->
   <main class="flex-1 px-4 py-6 max-w-7xl mx-auto">
     <ul id="busquedas" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
       
-<!-- Aquí se subiran los codigos <li> -->
+<!-- AquÃ­ se subiran los codigos <li> -->
 
 
 
 	    
-    <!--FINAL-->
+    <!-- INVENCIBLE -->
+<li>
+        <a href="https://SeriesLz.github.io/Invencible/index.html" tabindex="0" class="block outline-none focus:ring-2 ring-yellow-400 rounded">
+          <img src="https://image.tmdb.org/t/p/w500//zCgPbsPJ7d1qlXVn1cKvTlcob1H.jpg" alt="poster" class="w-full aspect-[2/3] rounded-lg object-cover mb-2 sm:mb-0">
+          <span class="hidden">INVENCIBLE 2021
+</span>
+		     <span class="hidden">Mark Grayson hereda superpoderes a los diecisiete años y se une a su padre como uno de los mayores héroes de la Tierra. Todos sus sueños se hacen realidad, hasta que un evento impactante lo cambia todo.</span>
+        </a>
+      </li>
+      <!--FINAL-->
+<!--FINAL-->
     </ul>
 
-    <!-- Botón ver más -->
+    <!-- BotÃ³n ver mÃ¡s -->
     <div class="text-center mt-6">
       <button id="verMasBtn" onclick="mostrarTodo()" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded hidden">
-        Ver más series
+        Ver mÃ¡s series
       </button>
     </div>
   </main>
@@ -75,10 +85,10 @@
   <footer class="bg-[#121212] text-[#999999] text-center py-6 text-sm">
     <div class="mb-2 space-x-4">
       <a href="#" class="hover:text-white">Privacidad</a>
-      <a href="#" class="hover:text-white">Términos de Uso</a>
+      <a href="#" class="hover:text-white">TÃ©rminos de Uso</a>
       <a href="#" class="hover:text-white">DMCA</a>
     </div>
-    <div>© 2025. Todos los derechos reservados. <strong>LzPlay!</strong> se usa bajo licencia.</div>
+    <div>Â© 2025. Todos los derechos reservados. <strong>LzPlay!</strong> se usa bajo licencia.</div>
   </footer>
 
   <!-- Script de filtrado y funciones -->
@@ -105,7 +115,7 @@
         ul.appendChild(el);
       });
 
-      // Mostrar botón si hay más de 30
+      // Mostrar botÃ³n si hay mÃ¡s de 30
       document.getElementById("verMasBtn").classList.toggle("hidden", li.length <= 30);
     }
 
