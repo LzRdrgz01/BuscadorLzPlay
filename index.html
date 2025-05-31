@@ -18,6 +18,18 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
+    /* Puntos animados */
+    .dot-1::after, .dot-2::after, .dot-3::after {
+      content: ".";
+      animation: blink 1.5s infinite;
+    }
+    .dot-2::after { animation-delay: 0.3s; }
+    .dot-3::after { animation-delay: 0.6s; }
+    @keyframes blink {
+      0%, 20% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
   </style>
 </head>
 <body class="bg-[#0a0a0a] text-white min-h-screen flex flex-col">
@@ -36,144 +48,27 @@
     </div>
   </header>
 
+  <!-- Estado de búsqueda -->
+  <div id="estadoBusqueda" class="text-center text-sm text-[#bbbbbb] mt-6 hidden"></div>
+
   <!-- Resultados -->
   <main class="flex-1 px-4 py-6 max-w-7xl mx-auto">
     <ul id="busquedas" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
-<!--PEGAR AQUI-->
- 
-                    <!-- Anne with an E -->
-<li>
-        <a href="https://serieslz.github.io/Anne-With-An-E/" tabindex="0" class="block outline-none focus:ring-2 ring-yellow-400 rounded">
-          <img src="https://image.tmdb.org/t/p/w500//6P6tXhjT5tK3qOXzxF9OMLlG7iz.jpg" alt="poster" class="w-full aspect-[2/3] rounded-lg object-cover mb-2 sm:mb-0">
-          <span class="hidden">Anne with an E 2017 anni con e anne con e
-</span>
-		     <span class="hidden">Anne Shirley es una niña huérfana que vive en un pequeño pueblo llamado Avonlea que pertenece a la Isla del Príncipe Eduardo, en el año 1890. Después de una infancia difícil, donde fue pasando de orfanato a hogares de acogida, es enviada por error a vivir con una solterona y su hermano. Cuando cumple 13 años, Anne va a conseguir transformar su vida y el pequeño pueblo donde vive gracias a su fuerte personalidad, intelecto e imaginación. Basada en la inolvidable novela.</span>
-        </a>
-      </li>
-      <!--FINAL-->
- 
-                    <!-- The Returned -->
-<li>
-        <a href="https://serieslz.github.io/TheReturned/" tabindex="0" class="block outline-none focus:ring-2 ring-yellow-400 rounded">
-          <img src="https://image.tmdb.org/t/p/w500//cKp0ZDYGydWxI3v8KS3tY8W9aM7.jpg" alt="poster" class="w-full aspect-[2/3] rounded-lg object-cover mb-2 sm:mb-0">
-          <span class="hidden">The Returned 2015 los retornados el retornado
-</span>
-		     <span class="hidden">Un pequeño pueblo que se pone patas arriba cuando varias personas locales, que durante mucho tiempo se dieron por muertas, reaparecen repentinamente; su presencia crea consecuencias tanto positivas como negativas. A medida que las familias se reúnen, las vidas de los que quedaron atrás se ven desafiadas tanto física como emocionalmente.</span>
-        </a>
-      </li>
-      <!--FINAL-->
- 
-                    <!-- Love, Death & Robots -->
-<li>
-        <a href="https://serieslz.github.io/amor-muerte-y-robots/" tabindex="0" class="block outline-none focus:ring-2 ring-yellow-400 rounded">
-          <img src="https://image.tmdb.org/t/p/w500//asDqvkE66EegtKJJXIRhBJPxscr.jpg" alt="poster" class="w-full aspect-[2/3] rounded-lg object-cover mb-2 sm:mb-0">
-          <span class="hidden">Love, Death & Robots 2019 amor muerte y robots Love, Death y Robots
-</span>
-		     <span class="hidden">Seres terroríficos, sorpresas retorcidas y humor negro convergen en esta antología de relatos animados para adultos presentada por Tim Miller y David Fincher.</span>
-        </a>
-      </li>
-      <!--FINAL-->
- 
-                    <!-- Dragon Ball Daima -->
-<li>
-        <a href="https://serieslz.github.io/Dragon-Ball-Daima/" tabindex="0" class="block outline-none focus:ring-2 ring-yellow-400 rounded">
-          <img src="https://image.tmdb.org/t/p/original/fHJgkdisqyP4aHM9HFcDDjJJaLX.jpg" alt="poster" class="w-full aspect-[2/3] rounded-lg object-cover mb-2 sm:mb-0">
-          <span class="hidden">Dragon Ball Daima 2024 dbz daima db z daima
-</span>
-		     <span class="hidden">Debido a una conspiración, Goku y sus amigos se vuelven pequeños. ¿Qué tipo de aventura les espera a Goku, al Supremo Kaio y a los nuevos personajes Glorio y Panzy en este mundo desconocido, el “Reino de los Demonios”?</span>
-        </a>
-      </li>
-      <!--FINAL-->
- 
-                    <!-- Día cero -->
-<li>
-        <a href="https://serieslz.github.io/diacero/index.html" tabindex="0" class="block outline-none focus:ring-2 ring-yellow-400 rounded">
-          <img src="https://image.tmdb.org/t/p/w500//285ow3eWdUV4ApB64axKmxn1MBJ.jpg" alt="poster" class="w-full aspect-[2/3] rounded-lg object-cover mb-2 sm:mb-0">
-          <span class="hidden">Día cero 2025 dia cero dia 0
-</span>
-		     <span class="hidden">Un expresidente de EE. UU. debe volver de su retiro para encontrar la fuente de un mortal ciberataque, solo para descubrir una vasta red de mentiras y conspiraciones.</span>
-        </a>
-      </li>
-      <!--FINAL-->
- 
-                    <!-- Los Caballeros del Zodiaco: Alma de Oro -->
-<li>
-        <a href="https://serieslz.github.io/Caballeros/index.html" tabindex="0" class="block outline-none focus:ring-2 ring-yellow-400 rounded">
-          <img src="https://image.tmdb.org/t/p/w500//rIgE2L76ZTjTnmRfSdLbF84NAG1.jpg" alt="poster" class="w-full aspect-[2/3] rounded-lg object-cover mb-2 sm:mb-0">
-          <span class="hidden">Los Caballeros del Zodiaco: Alma de Oro 2015
-</span>
-		     <span class="hidden">Tras haber sacrificado sus vidas para destruir el Muro de los Lamentos en la batalla contra Hades, Aioria y el resto de los Caballeros de Oro son resucitados en Asgard. Mientras buscan la razón por la que fueron traídos nuevamente a la vida, se ven envueltos en una batalla contra los renovados Dioses Guerreros del nuevo representante de Odín.</span>
-        </a>
-      </li>
-      <!--FINAL-->
- 
-                    <!-- Adolescencia -->
-<li>
-        <a href="https://serieslz.github.io/Adolescencia/index.html" tabindex="0" class="block outline-none focus:ring-2 ring-yellow-400 rounded">
-          <img src="https://image.tmdb.org/t/p/w500//cZdsqlIqhRbYNo8ttxb2ThC09Wa.jpg" alt="poster" class="w-full aspect-[2/3] rounded-lg object-cover mb-2 sm:mb-0">
-          <span class="hidden">Adolescencia 2025
-</span>
-		     <span class="hidden">Cuando un chico de 13 años es acusado de asesinar a una compañera de clase, su familia, su terapeuta y el detective a cargo se preguntan qué pasó en realidad.</span>
-        </a>
-      </li>
-      <!--FINAL-->
- 
-                    <!-- The Last of Us -->
-<li>
-        <a href="https://SeriesLz.github.io/thelastofus/index.html" tabindex="0" class="block outline-none focus:ring-2 ring-yellow-400 rounded">
-          <img src="https://image.tmdb.org/t/p/w500//tNQWO6cNzQYCyvw36mUcAQQyf5F.jpg" alt="poster" class="w-full aspect-[2/3] rounded-lg object-cover mb-2 sm:mb-0">
-          <span class="hidden">The Last of Us 2023
-</span>
-		     <span class="hidden">Veinte años después de la destrucción de la civilización moderna, Joel, un aguerrido superviviente, es contratado para sacar a Ellie, una joven de 14 años, de una opresiva zona de cuarentena. Lo que empieza como un trabajo sencillo pronto se convierte en un viaje brutal y desgarrador, ya que ambos deben atravesar Estados Unidos y depender el uno del otro para sobrevivir.</span>
-        </a>
-      </li>
-      <!--FINAL-->
+      <!-- Aquí se subiran los codigos  -->
 
- 
-                    <!-- Plunderer -->
-<li>
-        <a href="https://SeriesLz.github.io/plunderer/index.html" tabindex="0" class="block outline-none focus:ring-2 ring-yellow-400 rounded">
-          <img src="https://image.tmdb.org/t/p/w500//cp1iGqNNy5JRhWbpP3qoANgz1gV.jpg" alt="poster" class="w-full aspect-[2/3] rounded-lg object-cover mb-2 sm:mb-0">
-          <span class="hidden">Plunderer 2020
-</span>
-		     <span class="hidden">Año 305 del calendario Alcián, el mundo se encuentra controlado por los «númerps». Cada ser humano que nace es marcado con un «Contador». Este contador puede subir con cualquier acción; ya sea la cantidad de kilómetros recorridos, o si alguna persona dice que se su comida es sabrosa. Pero si su cuenta se reduce a 0, será enviado al abismo. Antes que la cuenta de la madre Hina llegará a 0, su ultima voluntad fue que buscara al Legendario Rey Caído.</span>
-        </a>
-      </li>
-      <!--FINAL-->
 
-    <!-- INVENCIBLE -->
-<li>
-        <a href="https://SeriesLz.github.io/Invencible/index.html" tabindex="0" class="block outline-none focus:ring-2 ring-yellow-400 rounded">
-          <img src="https://image.tmdb.org/t/p/w500//zCgPbsPJ7d1qlXVn1cKvTlcob1H.jpg" alt="poster" class="w-full aspect-[2/3] rounded-lg object-cover mb-2 sm:mb-0">
-          <span class="hidden">INVENCIBLE 2021
-</span>
-		     <span class="hidden">Mark Grayson hereda superpoderes a los diecisiete años y se une a su padre como uno de los mayores héroes de la Tierra. Todos sus sueños se hacen realidad, hasta que un evento impactante lo cambia todo.</span>
-        </a>
-      </li>
-      <!--FINAL-->
- 
-                    <!-- El Eternauta -->
-<li>
-        <a href="https://SeriesLz.github.io/ElEternauta/index.html" tabindex="0" class="block outline-none focus:ring-2 ring-yellow-400 rounded">
-          <img src="https://image.tmdb.org/t/p/w500//9Krv5NvKa5a3Q3b1l2B3rP9Bj8E.jpg" alt="poster" class="w-full aspect-[2/3] rounded-lg object-cover mb-2 sm:mb-0">
-          <span class="hidden">El Eternauta 2025
-</span>
-		     <span class="hidden">Después de una nevada mortal que acaba con gran parte de la población, Juan Salvo y un grupo de sobrevivientes en Buenos Aires deben resistir a una amenaza de otro planeta.</span>
-        </a>
-      </li>
-      <!--FINAL-->
 
-                    <!-- Kick Buttowski: Medio Doble de Riesgo -->
-<li>
-        <a href="https://SeriesLz.github.io/kickbuttowski/index.html" tabindex="0" class="block outline-none focus:ring-2 ring-yellow-400 rounded">
-          <img src="https://image.tmdb.org/t/p/w500//xhPpCLky3gmLlAjAs8gf15h6Bxg.jpg" alt="poster" class="w-full aspect-[2/3] rounded-lg object-cover mb-2 sm:mb-0">
-          <span class="hidden">Kick Buttowski: Medio Doble de Riesgo 2010
-</span>
-		     <span class="hidden">La historia se centra en Clarence Francis Buttowski, un acróbata que prefiere que lo llamen por el nombre de «Kick» Buttowski. Le gusta mucho la acción, el peligro y las cosas asombrosas y con su mejor amigo Gunther tratan de hacer lo más increíble.</span>
-        </a>
-      </li>
-      <!--FINAL-->
-</ul>
+
+	    
+    
+    </ul>
+
+    <!-- Botón ver más -->
+    <div class="text-center mt-6">
+      <button id="verMasBtn" onclick="mostrarTodo()" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded hidden">
+        Ver más series
+      </button>
+    </div>
   </main>
 
   <!-- Footer -->
@@ -183,55 +78,97 @@
       <a href="#" class="hover:text-white">Términos de Uso</a>
       <a href="#" class="hover:text-white">DMCA</a>
     </div>
-    <div>
-      © 2025. Todos los derechos reservados. <strong>LzPlay!</strong> se usa bajo licencia.
-    </div>
+    <div>© 2025. Todos los derechos reservados. <strong>LzPlay!</strong> se usa bajo licencia.</div>
   </footer>
 
-  <!-- Script de filtro -->
+  <!-- Script de filtrado y funciones -->
   <script>
-     function filtrar() {
+    let mostrandoTodo = false;
+
+    function ordenarYLimitar() {
+      const ul = document.getElementById("busquedas");
+      const li = Array.from(ul.querySelectorAll("li"));
+
+      li.sort((a, b) => new Date(b.getAttribute("data-fecha")) - new Date(a.getAttribute("data-fecha")));
+
+      li.forEach(el => ul.removeChild(el));
+
+      const visibles = li.slice(0, 30);
+      visibles.forEach(el => {
+        el.style.display = "";
+        ul.appendChild(el);
+      });
+
+      const ocultos = li.slice(30);
+      ocultos.forEach(el => {
+        el.style.display = "none";
+        ul.appendChild(el);
+      });
+
+      // Mostrar botón si hay más de 30
+      document.getElementById("verMasBtn").classList.toggle("hidden", li.length <= 30);
+    }
+
+    function mostrarTodo() {
+      const ul = document.getElementById("busquedas");
+      const li = ul.querySelectorAll("li");
+      li.forEach(el => el.style.display = "");
+      document.getElementById("verMasBtn").classList.add("hidden");
+      mostrandoTodo = true;
+    }
+
+    function filtrar() {
       const input = document.getElementById("buscar");
       const filter = input.value.trim().toUpperCase();
       const ul = document.getElementById("busquedas");
       const li = ul.getElementsByTagName("li");
+      const estado = document.getElementById("estadoBusqueda");
 
-      let hayCoincidencias = false;
+      estado.classList.remove("hidden");
+      estado.innerHTML = `Buscando<span class="dot-1"></span><span class="dot-2"></span><span class="dot-3"></span>`;
 
-      if (filter === "") {
-        ul.style.display = "none";
-        return;
-      }
-
-      for (let i = 0; i < li.length; i++) {
-        const a = li[i].getElementsByTagName("a")[0];
-        const txtValue = a.textContent || a.innerText;
-
-        if (txtValue.toUpperCase().includes(filter)) {
-          li[i].style.display = "";
-          li[i].classList.add("fade-in");
-          hayCoincidencias = true;
-        } else {
-          li[i].style.display = "none";
-          li[i].classList.remove("fade-in");
-        }
-      }
-
-      ul.style.display = hayCoincidencias ? "grid" : "none";
-    }
-  </script>
-
-  <!-- Autoenfoque con teclado en móviles -->
-  <script>
-    window.addEventListener("load", () => {
-      const input = document.getElementById("buscar");
-      input.focus();
       setTimeout(() => {
+        let hayCoincidencias = false;
+
+        for (let i = 0; i < li.length; i++) {
+          const a = li[i].getElementsByTagName("a")[0];
+          const txtValue = a.textContent || a.innerText;
+
+          if (filter && txtValue.toUpperCase().includes(filter)) {
+            li[i].style.display = "";
+            li[i].classList.add("fade-in");
+            hayCoincidencias = true;
+          } else if (filter) {
+            li[i].style.display = "none";
+            li[i].classList.remove("fade-in");
+          } else {
+            li[i].style.display = mostrandoTodo ? "" : "none";
+          }
+        }
+
+        if (filter === "") {
+          estado.classList.add("hidden");
+          mostrandoTodo = false;
+          ordenarYLimitar();
+        } else if (!hayCoincidencias) {
+          estado.innerHTML = `No se encontraron resultados`;
+        } else {
+          estado.classList.add("hidden");
+        }
+
+        ul.style.display = hayCoincidencias || filter === "" ? "grid" : "none";
+      }, 500);
+    }
+
+    window.addEventListener("load", () => {
+      document.getElementById("buscar").focus();
+      setTimeout(() => {
+        const input = document.getElementById("buscar");
         input.focus();
         input.setSelectionRange(input.value.length, input.value.length);
       }, 200);
+      ordenarYLimitar();
     });
-  </script>
   </script>
 
 </body>
